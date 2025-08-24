@@ -16,6 +16,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Toaster } from "@/components/ui/sonner";
+import { toast } from "sonner";
 
 const ProfilePage = () => {
   const { user } = useUser();
@@ -31,8 +33,27 @@ const ProfilePage = () => {
     : activePlan;
 
   return (
+    <>
+      <Toaster />
     <section className="relative z-10 pt-12 pb-32 flex-grow container mx-auto px-4">
+
       <ProfileHeader user={user} />
+
+      <Button
+        variant="ghost"
+        className="mb-6 hover:bg-amber-500"
+        onClick={() =>
+          toast("Your diet plan is being created", {
+            description: "Please wait while we prepare your personalized Gita-inspired diet plan.",
+            action: {
+              label: "Ok",
+              onClick: () => console.log("Ok"),
+            },
+          })
+        }
+      >
+        Show Diet Plan
+      </Button>
 
       {allPlans && allPlans?.length > 0 ? (
         <div className="space-y-8">
@@ -212,6 +233,7 @@ const ProfilePage = () => {
         <NoFitnessPlan />
       )}
     </section>
+    </>
   );
 };
 export default ProfilePage;
