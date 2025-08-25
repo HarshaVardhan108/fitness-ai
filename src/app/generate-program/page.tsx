@@ -158,7 +158,7 @@ const GenerateProgramPage = () => {
           </p>
           
           <p className="text-sm mt-2 border-10 w-100 m-auto ">
-            It's just a demo, please don't consider it as a real diet plan. 
+            It&apos;s just a demo, please don&apos;t consider it as a real diet plan. 
           </p>
         </div>
 
