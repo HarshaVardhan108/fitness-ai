@@ -156,6 +156,10 @@ const GenerateProgramPage = () => {
           <p className="text-muted-foreground mt-2">
             Have a voice conversation with our AI assistant to create your personalized Gita diet plan
           </p>
+          
+          <p className="text-sm mt-2 border-10 w-100 m-auto ">
+            It's just a demo, please don't consider it as a real diet plan. 
+          </p>
         </div>
 
         {/* VIDEO CALL AREA */}
